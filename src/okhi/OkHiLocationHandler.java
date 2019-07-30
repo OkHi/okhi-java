@@ -1,6 +1,6 @@
 package okhi;
 
-interface OkHiLocationHandler {
+public interface OkHiLocationHandler {
   public void onSuccess(OkHiLocation location, OkHiUser user);
   public void onError(OkHiError error);
 }

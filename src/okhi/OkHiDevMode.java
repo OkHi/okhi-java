@@ -1,3 +1,3 @@
 package okhi;
 
-enum OkHiDevMode { SANDBOX, PRODUCTION }
+public enum OkHiDevMode { SANDBOX, PRODUCTION }

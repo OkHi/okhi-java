@@ -1,8 +1,8 @@
 package okhi;
 
 public class OkHiError {
-  String code;
-  String message;
+  public String code;
+  public String message;
 
   public OkHiError(String code, String error) {
     this.code = code;
