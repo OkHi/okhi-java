@@ -32,12 +32,12 @@ public class Main extends Application {
 
       @Override
       public void onSuccess(OkHiLocation location, OkHiUser user) {
-        // TODO: handle success
+        // TODO: handle success here
       }
 
       @Override
       public void onError(OkHiError error) {
-        // TODO: handle error
+        // TODO: handle error here
       }
     });
 
