@@ -15,7 +15,7 @@ public class OkHi {
   private OkHiLocationHandler okHiLocationHandler;
   private OkHiDevMode devMode;
   private OkHiStyle style;
-  private String SANDBOX_URL = "http://localhost:5000";
+  private String SANDBOX_URL = "https://manager-v4.okhi.dev";
   private String PRODUCTION_URL = "https://manager-v4.okhi.co";
   private String SANDBOX_NAMESPACE = "com.develop.okhiJavaLib.okhi";
   private String PRODUCTION_NAMESPACE = "com.develop.production.okhi";
@@ -24,7 +24,7 @@ public class OkHi {
   private String BUILD = "1";
   private String NAMESPACE;
   private String URL;
-  private boolean debug = true;
+  private boolean debug = false;
 
   public OkHi(OkHiAuth auth, OkHiUser user, OkHiStyle style, OkHiDevMode devMode, OkHiLocationHandler okHiLocationHandler) {
     this.auth = auth;

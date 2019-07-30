@@ -33,11 +33,13 @@ public class Main extends Application {
       @Override
       public void onSuccess(OkHiLocation location, OkHiUser user) {
         // TODO: handle success here
+        System.out.println(location.title);
       }
 
       @Override
       public void onError(OkHiError error) {
         // TODO: handle error here
+        System.out.println(error.code);
       }
     });
 
