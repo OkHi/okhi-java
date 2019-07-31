@@ -15,6 +15,7 @@ public class OkHi {
   private OkHiLocationHandler okHiLocationHandler;
   private OkHiDevMode devMode;
   private OkHiStyle style;
+  private OkHiLaunchMode launchMode;
   private String SANDBOX_URL = "https://manager-v4.okhi.dev";
   private String PRODUCTION_URL = "https://manager-v4.okhi.co";
   private String SANDBOX_NAMESPACE = "com.develop.okhiJavaLib.okhi";
@@ -26,12 +27,13 @@ public class OkHi {
   private String URL;
   private boolean debug = false;
 
-  public OkHi(OkHiAuth auth, OkHiUser user, OkHiStyle style, OkHiDevMode devMode, OkHiLocationHandler okHiLocationHandler) {
+  public OkHi(OkHiAuth auth, OkHiUser user, OkHiStyle style, OkHiLaunchMode launchMode, OkHiDevMode devMode, OkHiLocationHandler okHiLocationHandler) {
     this.auth = auth;
     this.user = user;
     this.okHiLocationHandler = okHiLocationHandler;
     this.devMode = devMode;
     this.style = style;
+    this.launchMode = launchMode;
     if(devMode == OkHiDevMode.PRODUCTION) {
       this.URL = PRODUCTION_URL;
       this.NAMESPACE = PRODUCTION_NAMESPACE;
@@ -74,7 +76,7 @@ public class OkHi {
   }
 
   private String generateStartPayload() {
-    String message = "start_app";
+    String message = launchMode.name().toLowerCase();
     JSONObject output = new JSONObject();
     JSONObject payload = new JSONObject();
     JSONObject parent = new JSONObject();

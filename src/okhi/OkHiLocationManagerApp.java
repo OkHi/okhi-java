@@ -25,6 +25,8 @@ public class OkHiLocationManagerApp implements OkHiLocationManagerBridge {
       case "fatal_exit":
         handleFailure(transmission);
         break;
+      case "exit_app":
+        handleExit();
       default:
         break;
     }
@@ -39,5 +41,9 @@ public class OkHiLocationManagerApp implements OkHiLocationManagerBridge {
   private void handleFailure(OkHiTransmission transmission) {
     OkHiError error = new OkHiError(transmission);
     okHiLocationHandler.onError(error);
+  }
+
+  private void handleExit() {
+    okHiLocationHandler.onCloseRequest();
   }
 }

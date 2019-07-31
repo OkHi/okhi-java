@@ -28,7 +28,7 @@ public class Main extends Application {
     OkHiAuth auth = new OkHiAuth("r:b59a93ba7d80a95d89dff8e4c52e259a");
     OkHiUser user = new OkHiUser("Bob", "Markson", "0721856492");
     OkHiStyle style = new OkHiStyle("#ba0c2f", "Jubilee Insurance", "https://jubileeinsurance.com/ke/wp-content/themes/_ji/images/logo.svg");
-    OkHi okhi = new OkHi(auth, user, style, OkHiDevMode.SANDBOX, new OkHiLocationHandler() {
+    OkHi okhi = new OkHi(auth, user, style, OkHiLaunchMode.SELECT_LOCATION, OkHiDevMode.SANDBOX, new OkHiLocationHandler() {
 
       @Override
       public void onSuccess(OkHiLocation location, OkHiUser user) {
@@ -40,6 +40,12 @@ public class Main extends Application {
       public void onError(OkHiError error) {
         // TODO: handle error here
         System.out.println(error.code);
+      }
+
+      @Override
+      public void onCloseRequest() {
+        // TODO: handle case when user taps the close button
+        System.out.println("close me");
       }
     });
 
