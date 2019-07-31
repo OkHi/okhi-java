@@ -19,7 +19,7 @@ public class OkHi {
   private String SANDBOX_URL = "https://manager-v4.okhi.dev";
   private String PRODUCTION_URL = "https://manager-v4.okhi.co";
   private String SANDBOX_NAMESPACE = "com.develop.okhiJavaLib.okhi";
-  private String PRODUCTION_NAMESPACE = "com.develop.production.okhi";
+  private String PRODUCTION_NAMESPACE = "com.production.okhiJavaLib.okhi";
   private String NAME = "okhiJavaLib";
   private String VERSION = "1.0.0";
   private String BUILD = "1";
